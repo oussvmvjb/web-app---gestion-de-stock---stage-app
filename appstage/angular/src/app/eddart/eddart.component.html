@@ -1,0 +1,52 @@
+<div class="container mt-3">
+  <div class="row justify-content-center">
+  <div class="row justify-content-center col-md-6 card shadow-sm  ">
+    <div class="card-header  text-white text-center py-2">
+      <h4 class="mb-0">Edit Article</h4>
+    </div>
+    <div class="card-body p-3">
+      <form>
+        <div class="mb-2">
+          <label for="nomarticle" class="form-label"><i class="fas fa-tag"></i>Article Name</label>
+          <input id="nomarticle" type="text" class="form-control form-control-sm" [(ngModel)]="article.nomarticle" name="nomarticle" />
+        </div>
+
+        <div class="mb-2">
+          <label for="sn" class="form-label"><i class="fas fa-barcode"></i> SerialNumber</label>
+          <input id="sn" type="text" class="form-control form-control-sm" [(ngModel)]="article.sn" name="sn" disabled />
+        </div>
+
+        <div class="mb-2">
+          <label for="model" class="form-label"><i class="fas fa-cube"></i> Model</label>
+          <input id="model" type="text" class="form-control form-control-sm" [(ngModel)]="article.model" name="model" />
+        </div>
+
+        <div class="mb-2">
+          <label for="description" class="form-label"><i class="fas fa-align-left"></i> Description</label>
+          <textarea id="description" class="form-control form-control-sm" rows="2" [(ngModel)]="article.description" name="description"></textarea>
+        </div>
+
+        <div class="mb-2">
+          <label for="statu" class="form-label"><i class="fas fa-list"></i> Status</label>
+          <select id="statu" class="form-control form-control-sm" [(ngModel)]="article.statu" name="statu">
+            <option value="En Stock">En Stock</option>
+            <option value="En Panne">En Panne</option>
+            <option value="En Réparation">En Réparation</option>
+            <option value="Rebut">Rebut</option>
+          </select>
+        </div>
+
+        <div class="mb-2">
+          <label for="emplacement" class="form-label"><i class="fas fa-map-marker-alt"></i> Location</label>
+          <input id="emplacement" type="text" class="form-control form-control-sm" [(ngModel)]="article.emplacement" name="emplacement" />
+        </div>
+
+        <div class="text-center mt-3">
+          <button type="button" class="btn btn-success btn-sm me-2 px-3" (click)="saveChanges()">Save</button>
+          <button type="button" class="btn btn-secondary btn-sm px-3" (click)="cancel()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+</div>

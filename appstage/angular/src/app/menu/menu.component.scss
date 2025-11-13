@@ -1,0 +1,52 @@
+
+  img {
+    mix-blend-mode: multiply;
+  }
+  .navbar {
+    font-size: 14px; /* تصغير حجم النص في الـ Navbar */
+    padding: 5px 10px; /* تقليل التباعد */
+    background-color: #a255e6; 
+  }
+  
+  .logo-img {
+    width: 105px; /* تصغير اللوجو */
+    height: auto;
+    margin-right: 5px;
+  }
+  /* Style for positioning the search bar */
+#searchForm {
+  position: absolute;
+  right: 105px; /* Adjust position as needed */
+  top: 15px;  /* Adjust as needed */
+  z-index: 100;
+  width: auto;
+}
+
+/* For smaller screens, the search bar should still be at the top-right */
+@media (max-width: 50px) {
+  #searchForm {
+    position: absolute;
+    top: 15px;
+    right: 5px;
+    width: 30%; /* Take full width on small screens */
+  }
+}
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.spinner-border {
+  border-width: 4px;
+}
+
+  

@@ -1,0 +1,55 @@
+<div class="row">
+  <div *ngFor="let article of filteredArticles" class="col-md-4 mb-4">
+    <div class="card-container">
+      <div class="card-inner" [ngClass]="{ 'flipped': flippedCards[article.sn] }">
+        
+        <!-- Front Side -->
+        <div class="card card-front">
+          <div class="card-body">
+            <h5 class="card-title text-primary">{{ article.nomarticle }}</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">
+              <strong>Serial Number:</strong> {{ article.sn }}
+            </h6>
+            <p class="card-text"><strong>Model:</strong> {{ article.model }}</p>
+            <p class="card-text"><strong>Description:</strong> {{ article.description }}</p>
+            <p class="card-text"><strong>Status:</strong> {{ article.statu }}</p>
+            <p class="card-text"><strong>Emplacement:</strong> {{ article.emplacement }}</p>
+            <p class="card-text"><strong>Registration Date:</strong>{{ article.regesdate | date: 'dd/MM/yyyy HH:mm:ss' }}</p>
+          </div>
+          <div class="card-footer text-center">
+            <a href="#" class="btn btn-primary btn-sm" (click)="toggleCard(article.sn); $event.preventDefault()">Edit Status</a>
+            <a class="btn btn-success btn-sm" [routerLink]="['/menu/edit', article.sn]">Edit</a>
+            <a  class="btn btn-danger btn-sm" (click)="deleteArticle(article)">Delete</a>
+          </div>
+        </div> 
+
+        <!-- Back Side -->
+        <div class="card card-back">
+          <div class="card-body text-center">
+            <p><strong>Edit Status</strong></p>
+            <div class="btn-group-vertical" role="group">
+              <button type="button" class="btn btn-success" (click)="updateArticleStatus(article, 'En Stock')">
+                <i class="fas fa-box"></i> En Stock
+              </button>
+              <button type="button" class="btn btn-warning" (click)="updateArticleStatus(article, 'En Panne')">
+                <i class="fas fa-exclamation-triangle"></i> En Panne
+              </button>
+              <button type="button" class="btn btn-primary" (click)="updateArticleStatus(article, 'En Réparation')">
+                <i class="fas fa-wrench"></i> En Réparation
+              </button>
+              <button type="button" class="btn btn-danger" (click)="updateArticleStatus(article, 'Rebut')">
+                <i class="fas fa-trash"></i> Rebut
+              </button>
+            </div>
+          </div>
+        
+        
+        <!-- Back Button -->
+        <div class="card-footer text-center">
+          <a href="#" class="btn btn-danger btn-sm" (click)="toggleCard(article.sn); $event.preventDefault()">Back</a>
+        </div>
+</div>
+      </div>
+    </div>
+  </div>
+</div>

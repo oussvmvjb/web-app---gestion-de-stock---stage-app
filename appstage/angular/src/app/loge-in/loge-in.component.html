@@ -1,0 +1,42 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6 card shadow-lg border-0 rounded-4">
+      <img src="../../assets/logo2.jpg" alt="Logo" class="logo-img">
+      <div class="card">
+        <div class="card-header text-center">
+          <h3>Log In</h3>
+        </div>
+        <div class="card-body">
+          <form #f="ngForm" (ngSubmit)="onLogin(f)">
+            <div class="form-group">
+              <label for="user">CIN</label>
+              <input type="text" id="cin" name="cin" class="form-control" required  ngModel placeholder="Enter your CIN"
+              />
+            </div>
+            <div class="form-group">
+              <label for="psw">Password</label>
+              <div class="position-relative">
+                <input id="psw" name="psw" type="{{ showpsw ? 'text' : 'password' }}" class="form-control" required ngModel placeholder="Enter your Password"
+                />
+                <span
+                  class="position-absolute"
+                  style="right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;"
+                  (click)="eye()"
+                >
+                  <i [ngClass]="showpsw ? 'fa fa-eye-slash' : 'fa fa-eye'"></i>
+                </span>
+              </div>
+              <div class="text-success" *ngIf="errera">{{ errera }}</div>
+              <div class="text-danger" *ngIf="errer">{{ errer }}</div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" >Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center mt-3">
+    <p>If you don't have an account, <a href="mailto:itchef@example.com">send an email to IT Chef</a>.</p>
+
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<h2 class="text-center my-4">Statistiques des Articles</h2>
+<div class="container">
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped text-center">
+      <thead class="thead-dark">
+        <tr>
+          <th>Emplacement</th>
+          <th>En Stock</th>
+          <th>En Panne</th>
+          <th>En Réparation</th>
+          <th>Rebut</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let stat of statistiques">
+          <td>{{ stat.emplacement }}</td>
+          <td>{{ stat.enStock }}</td>
+          <td>{{ stat.enPanne }}</td>
+          <td>{{ stat.enReparation }}</td>
+          <td>{{ stat.rebut }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

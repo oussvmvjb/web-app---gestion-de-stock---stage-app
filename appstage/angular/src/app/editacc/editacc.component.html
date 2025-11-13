@@ -1,0 +1,36 @@
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 rounded-4">
+      <div class="card-header  text-white text-center">
+        <h2 class="mb-0">Edit Your Account</h2>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="mb-3">
+            <label for="nom" class="form-label">First Name:</label>
+            <input id="nom" type="text" class="form-control" [(ngModel)]="e.nom" name="nom" />
+          </div>
+          <div class="mb-3">
+            <label for="prenom" class="form-label">Last Name:</label>
+            <input id="prenom" type="text" class="form-control" [(ngModel)]="e.prenom" name="prenom" />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input id="email" type="email" class="form-control" [(ngModel)]="e.email" name="email" />
+          </div>
+          <div class="mb-3">
+            <label for="clas" class="form-label">Employee ID:</label>
+            <input id="clas" type="text" class="form-control" [(ngModel)]="e.clas" name="clas" />
+          </div>
+          <div class="mb-3">
+            <label for="cin" class="form-label">CIN:</label>
+            <input id="cin" type="text" class="form-control" [(ngModel)]="e.cin" name="cin" disabled />
+          </div>
+          <div class="text-center">
+            <button type="button" class="btn btn-success me-2" (click)="saveChanges()">Save Changes</button>
+            <button type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

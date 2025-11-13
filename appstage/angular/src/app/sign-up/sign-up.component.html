@@ -1,0 +1,61 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6 card shadow-lg border-0 rounded-4">
+      <div class="card">
+        <div class="card-header text-center">
+          <h3>Add Employee</h3>
+        </div>
+        <div class="card-body">
+          <form #f="ngForm" (ngSubmit)="verifier(f)">
+            <div class="form-group">
+              <label for="nom">First Name:</label>
+              <input type="text" id="nom" name="nom" class="form-control" required ngModel placeholder="Enter your first name"/>
+              <div class="text-danger" *ngIf="errernom">{{ errernom }}</div>
+            </div>
+            <div class="form-group">
+              <label for="prenom">Last Name:</label>
+              <input type="text" id="prenom" name="prenom" class="form-control" required ngModel placeholder="Enter your last name"/>
+              <div class="text-danger" *ngIf="errerpre">{{ errerpre }}</div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" class="form-control" required ngModel placeholder="Enter your email"/>
+              <div class="text-danger" *ngIf="erreml">{{ erreml }}</div>
+            </div>
+            
+            <div class="form-group">
+              <label for="Emplo">Employee ID:</label>
+              <input type="Emplo" id="Emplo" name="Emplo" class="form-control" required ngModel placeholder="Enter your Employee ID"/>
+              <div class="text-danger" *ngIf="erreml">{{ erreml }}</div>
+            </div>
+             
+            <div class="form-group">
+              <label for="user">CIN</label>
+              <input type="text" id="cin" name="cin" class="form-control" required ngModel placeholder="Enter your CIN"
+              />
+              <div class="text-danger" *ngIf="errcin">{{ errcin }}</div>
+            </div>
+            <div class="form-group">
+              <label for="psw">Password</label>
+              <div class="position-relative">
+                <input id="psw" name="psw" type="{{ showpsw ? 'text' : 'password' }}" class="form-control" required ngModel placeholder="Enter your Password"
+                />
+                <span
+                  class="position-absolute"
+                  style="right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;"
+                  (click)="eye()"
+                >
+                  <i [ngClass]="showpsw ? 'fa fa-eye-slash' : 'fa fa-eye'"></i>
+                </span>
+                
+              </div>
+              <div class="text-danger" *ngIf="errpsw">{{ errpsw }}</div>
+            </div>
+            
+            <button type="submit" class="btn btn-primary  btn-block">ADD</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
