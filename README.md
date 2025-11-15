@@ -21,14 +21,12 @@ Développée dans le cadre d’un **stage**, cette application facilite la gesti
 ## 🛠️ Stack Technique
 
 ### **Frontend**
-- **React** / **Next.js** (ou Angular si tu veux garder الإصدار الأصلي)
+- **Angular** 
 - TailwindCSS / Bootstrap  
-- Axios
 
 ### **Backend**
 - Node.js  
-- Express / NestJS  
-- Prisma (ou MySQL / MongoDB selon ton projet)
+- loopback
 
 ### **Base de données**
 - MySQL  
@@ -37,9 +35,7 @@ Développée dans le cadre d’un **stage**, cette application facilite la gesti
 ### **Outils & Dev**
 - Git / GitHub  
 - Postman  
-- Docker (optionnel)
 
 ---
 
-## 📂 Architecture du Projet (Exemple)
 
